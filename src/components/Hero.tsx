@@ -153,7 +153,7 @@ export const Hero: React.FC = () => {
                 </div>
 
                 {/* Floating Mini Highlight Badge with subtle hover lift */}
-                <div className="absolute -bottom-4 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md border border-swasthiq-border p-3.5 rounded-2xl shadow-card flex items-center gap-3 transition-transform duration-200 hover:-translate-y-0.5">
+                <div className="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 sm:left-4 sm:translate-x-0 lg:-left-2 whitespace-nowrap bg-white/95 backdrop-blur-md border border-swasthiq-border p-3.5 rounded-2xl shadow-card flex items-center gap-3 transition-transform duration-200 hover:-translate-y-0.5">
                   <div className="w-10 h-10 rounded-xl bg-swasthiq-insight flex items-center justify-center text-swasthiq-teal">
                     <Sparkle size={22} weight="fill" />
                   </div>

@@ -111,7 +111,7 @@ export const DoctorAccess: React.FC = () => {
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute -bottom-4 -right-4 sm:-right-6 bg-white/95 backdrop-blur-md border border-swasthiq-border p-3 rounded-2xl shadow-card flex items-center gap-2.5 transition-transform duration-200 hover:-translate-y-0.5">
+              <div className="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 sm:right-4 sm:left-auto sm:translate-x-0 lg:-right-2 whitespace-nowrap bg-white/95 backdrop-blur-md border border-swasthiq-border p-3 rounded-2xl shadow-card flex items-center gap-2.5 transition-transform duration-200 hover:-translate-y-0.5">
                 <CheckCircle size={22} className="text-swasthiq-teal" weight="fill" />
                 <span className="text-xs font-bold text-swasthiq-text">Granular User Consent</span>
               </div>
