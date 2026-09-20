@@ -6,6 +6,25 @@ The website communicates the core app value proposition, showcases real applicat
 
 ---
 
+## 📦 Project Separation
+
+The SwasthIQ ecosystem consists of two completely independent, decoupled repositories:
+
+1. **SwasthIQ (Main Flutter Application)**:
+   - **Local Path**: `E:\Krish\My_Learnings\Projects\SwasthIQ\SwasthIQ`
+   - **GitHub Repository**: [`Krishsarvaiya/SwasthIQ`](https://github.com/Krishsarvaiya/SwasthIQ)
+   - **Purpose**: Cross-platform Flutter healthcare mobile/web app (Patient portal, Doctor portal, Admin portal, Medical Vault, OCR/AI analysis).
+   - **Releases**: Hosts the official Android APK builds via GitHub Releases (`SwasthIQ.apk`).
+
+2. **SwasthIQ-Website (Public Marketing & Beta Portal)**:
+   - **Local Path**: `E:\Krish\My_Learnings\Projects\SwasthIQ\SwasthIQ-Website`
+   - **GitHub Repository**: [`Krishsarvaiya/SwasthIQ-Website`](https://github.com/Krishsarvaiya/SwasthIQ-Website)
+   - **Purpose**: Public-facing React/Vite/Tailwind product landing page, interactive real app showcase, and beta tester feedback intake.
+   - **Deployment**: Deployed independently as a static web application on Vercel.
+   - **APK Integration**: The website contains **zero** APK binaries; all download buttons link directly to the latest release asset hosted on the main app's GitHub Releases (`https://github.com/Krishsarvaiya/SwasthIQ/releases/latest/download/SwasthIQ.apk`).
+
+---
+
 ## 🚀 Tech Stack
 
 - **Framework**: React 18 + Vite + TypeScript
