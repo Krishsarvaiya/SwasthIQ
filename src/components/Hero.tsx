@@ -3,6 +3,7 @@ import { DownloadSimple, ArrowRight, ShieldCheck, Sparkle } from '@phosphor-icon
 import { CONFIG } from '../config';
 import { ScanDemo } from './ScanDemo';
 import { LotusMark } from './LotusMark';
+import { PhoneScreen } from './PhoneScreen';
 
 export const Hero: React.FC = () => {
   const [parallax, setParallax] = useState({ x: 0, y: 0 });
@@ -155,18 +156,17 @@ export const Hero: React.FC = () => {
               <div className="animate-float-subtle">
                 {/* Phone Frame */}
                 <div className="relative rounded-[2.5rem] p-3 bg-gradient-to-b from-swasthiq-border/80 via-white to-swasthiq-border/60 shadow-floating border border-swasthiq-border">
-                  <div className="relative rounded-[2.1rem] overflow-hidden bg-swasthiq-bg border border-swasthiq-border/40 aspect-[9/19.5] pt-7">
+                  <div className="relative rounded-[2.1rem] overflow-hidden bg-swasthiq-bg border border-swasthiq-border/40 aspect-[9/19.5]">
                     {/* Top Notch / Dynamic Island indicator */}
                     <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-[#092A4A]/90 rounded-full z-20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-swasthiq-teal/70 mr-3" />
                       <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
                     </div>
 
-                    {/* Real Dashboard Screenshot (object-contain ensures complete header visibility) */}
-                    <img
+                    {/* Real Dashboard Screenshot with PhoneScreen */}
+                    <PhoneScreen
                       src="/assets/screens/01-dashboard.png"
                       alt="SwasthIQ Real Dashboard Screen"
-                      className="w-full h-full object-cover object-top"
                       loading="eager"
                     />
                   </div>
