@@ -29,7 +29,7 @@ export const DoctorAccess: React.FC = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-28 bg-swasthiq-card border-y border-swasthiq-border/80">
+    <section ref={sectionRef} className="py-12 md:py-16 bg-swasthiq-card border-y border-swasthiq-border/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Text & Flow */}
@@ -92,9 +92,9 @@ export const DoctorAccess: React.FC = () => {
               isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <div className="relative w-full max-w-[310px] sm:max-w-[340px]">
+            <div className="relative w-full max-w-[min(340px,38vh)] min-w-[250px]">
               <div className="relative rounded-[2.5rem] p-3.5 bg-gradient-to-b from-swasthiq-border/90 via-white to-swasthiq-border/70 shadow-floating border border-swasthiq-border">
-                <div className="relative rounded-[2.1rem] overflow-hidden bg-swasthiq-bg border border-swasthiq-border/40 aspect-[9/19.5]">
+                <div className="relative rounded-[2.1rem] overflow-hidden bg-swasthiq-bg border border-swasthiq-border/40 aspect-[9/19.5] pt-7">
                   <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-[#092A4A]/90 rounded-full z-20 flex items-center justify-center">
                     <div className="w-2 h-2 rounded-full bg-swasthiq-teal/70 mr-3" />
                     <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
@@ -104,7 +104,7 @@ export const DoctorAccess: React.FC = () => {
                   <img
                     src="/assets/screens/06-doctor-access.png"
                     alt="SwasthIQ Doctor Access Consent Screen"
-                    className="w-full h-full object-contain object-top"
+                    className="w-full h-full object-cover object-top"
                     loading="lazy"
                   />
                 </div>

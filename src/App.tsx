@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { OnePlace } from './components/OnePlace';
-import { CoreFeatures } from './components/CoreFeatures';
+import { WhySwasthIQ } from './components/WhySwasthIQ';
 import { AppShowcase } from './components/AppShowcase';
 import { HowItWorks } from './components/HowItWorks';
 import { DoctorAccess } from './components/DoctorAccess';
+import { FAQ } from './components/FAQ';
 import { BetaCTA } from './components/BetaCTA';
 import { FeedbackModal } from './components/FeedbackModal';
 import { Footer } from './components/Footer';
@@ -22,11 +22,8 @@ export const App: React.FC = () => {
         {/* 2. Hero */}
         <Hero />
 
-        {/* 3. One Place for Your Health */}
-        <OnePlace />
-
         {/* 4. Core Features */}
-        <CoreFeatures />
+        <WhySwasthIQ />
 
         {/* 5. Real App Showcase */}
         <AppShowcase />
@@ -36,6 +33,8 @@ export const App: React.FC = () => {
 
         {/* 7. Doctor Access */}
         <DoctorAccess />
+
+        <FAQ />
 
         {/* 8. Android Beta CTA */}
         <BetaCTA onOpenFeedback={() => setIsFeedbackOpen(true)} />

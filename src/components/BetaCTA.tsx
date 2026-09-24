@@ -11,7 +11,7 @@ export const BetaCTA: React.FC<BetaCTAProps> = ({ onOpenFeedback }) => {
   const [sectionRef, isInView] = useInView<HTMLElement>({ threshold: 0.2 });
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-28 relative overflow-hidden">
+    <section ref={sectionRef} className="py-12 md:py-16 relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute inset-0 bg-gradient-to-b from-swasthiq-bg via-swasthiq-insight/30 to-swasthiq-bg pointer-events-none -z-10" />
 
@@ -63,6 +63,11 @@ export const BetaCTA: React.FC<BetaCTAProps> = ({ onOpenFeedback }) => {
             <p className="text-xs text-white/60 pt-3">
               Requires Android 8.0 (API 26) or newer. Free during the public beta test.
             </p>
+            {CONFIG.apkSha256 && (
+              <p className="text-[11px] text-white/50 break-all">
+                SHA-256: <code>{CONFIG.apkSha256}</code>
+              </p>
+            )}
           </div>
         </div>
       </div>

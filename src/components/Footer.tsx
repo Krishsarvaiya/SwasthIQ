@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenFeedback }) => {
   return (
     <footer
       ref={footerRef}
-      className={`bg-swasthiq-card border-t border-swasthiq-border py-12 md:py-16 transition-all duration-700 ease-out ${
+      className={`bg-swasthiq-card border-t border-swasthiq-border py-10 md:py-12 transition-all duration-700 ease-out ${
         isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
       }`}
     >
@@ -57,6 +57,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenFeedback }) => {
             >
               Feedback
             </button>
+            <a href="#faq" className="hover:text-swasthiq-teal transition-colors duration-200">FAQ</a>
+            <a href="/privacy.html" className="hover:text-swasthiq-teal transition-colors duration-200">Privacy</a>
             <a
               href={CONFIG.androidBetaUrl}
               className="text-swasthiq-teal hover:underline inline-flex items-center gap-1 group transition-colors duration-200"

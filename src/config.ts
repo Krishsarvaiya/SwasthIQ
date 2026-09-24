@@ -4,4 +4,5 @@ export const CONFIG = {
     (import.meta.env.VITE_ANDROID_BETA_URL && !import.meta.env.VITE_ANDROID_BETA_URL.includes('SwasthIQ-Flutter'))
       ? import.meta.env.VITE_ANDROID_BETA_URL
       : 'https://github.com/Krishsarvaiya/SwasthIQ/releases/latest/download/SwasthIQ.apk',
+  apkSha256: import.meta.env.VITE_APK_SHA256 || '',
 };

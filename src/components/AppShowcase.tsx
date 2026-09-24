@@ -87,12 +87,12 @@ export const AppShowcase: React.FC = () => {
     <section
       ref={sectionRef}
       id="showcase"
-      className="pt-10 pb-20 md:pt-14 md:pb-32 bg-swasthiq-bg border-y border-swasthiq-border/80"
+      className="py-12 md:py-16 bg-swasthiq-bg border-y border-swasthiq-border/80"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header with smooth entrance */}
         <div
-          className={`text-center max-w-3xl mx-auto mb-10 space-y-3 transition-all duration-600 ease-out ${
+          className={`text-center max-w-3xl mx-auto mb-8 space-y-3 transition-all duration-600 ease-out ${
             isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
@@ -189,10 +189,10 @@ export const AppShowcase: React.FC = () => {
 
             {/* Right Screen Device Frame Mockup (Solid Stable Frame, Smooth Screen Transition) */}
             <div className="lg:col-span-7 flex justify-center">
-              <div className="relative w-full max-w-[310px] sm:max-w-[340px]">
+              <div className="relative w-full max-w-[min(340px,38vh)] min-w-[250px]">
                 {/* Stationary Device Frame */}
                 <div className="relative rounded-[2.5rem] p-3.5 bg-gradient-to-b from-swasthiq-border/90 via-white to-swasthiq-border/70 shadow-floating border border-swasthiq-border">
-                  <div className="relative rounded-[2.1rem] overflow-hidden bg-swasthiq-bg border border-swasthiq-border/40 aspect-[9/19.5]">
+                  <div className="relative rounded-[2.1rem] overflow-hidden bg-swasthiq-bg border border-swasthiq-border/40 aspect-[9/19.5] pt-7">
                     {/* Top Notch Indicator */}
                     <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-[#092A4A]/90 rounded-full z-20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-swasthiq-teal/70 mr-3" />
@@ -204,7 +204,7 @@ export const AppShowcase: React.FC = () => {
                       key={activeScreen.image}
                       src={activeScreen.image}
                       alt={`SwasthIQ screen: ${activeScreen.title}`}
-                      className="w-full h-full object-contain object-top animate-screen-enter will-change-transform"
+                      className="w-full h-full object-cover object-top animate-screen-enter will-change-transform"
                       loading="lazy"
                     />
                   </div>

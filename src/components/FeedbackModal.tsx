@@ -14,6 +14,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose })
   const [description, setDescription] = useState<string>('');
   const [device, setDevice] = useState<string>('');
   const [email, setEmail] = useState<string>('');
+  const [honeypot, setHoneypot] = useState<string>('');
 
   // Submission Status State
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -111,6 +112,17 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose })
     e.preventDefault();
     setErrorMessage(null);
 
+    if (honeypot) {
+      setIsSuccess(true);
+      return;
+    }
+    let last = 0;
+    try { last = Number(sessionStorage.getItem('fb_last') || 0); } catch { /* storage unavailable */ }
+    if (Date.now() - last < 30000) {
+      setErrorMessage('Please wait a few seconds before sending another message.');
+      return;
+    }
+
     if (!validate()) {
       return;
     }
@@ -139,6 +151,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose })
         throw new Error(`Server returned status ${response.status}`);
       }
 
+      try { sessionStorage.setItem('fb_last', String(Date.now())); } catch { /* ignore */ }
       setIsSuccess(true);
       // Clean form on success
       setSelectedFeatures([]);
@@ -157,7 +170,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose })
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-[#092A4A]/60 backdrop-blur-sm animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-[#092A4A]/60 backdrop-blur-sm"
       role="dialog"
       aria-modal="true"
       aria-labelledby="feedback-modal-title"
@@ -366,6 +379,8 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose })
                 <p className="text-xs text-rose-500 font-medium mt-1">{validationErrors.email}</p>
               )}
             </div>
+
+            <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} className="hidden" />
 
             {/* Privacy Note */}
             <p className="text-xs text-swasthiq-muted/80 bg-swasthiq-bg p-3 rounded-xl border border-swasthiq-border/60">
