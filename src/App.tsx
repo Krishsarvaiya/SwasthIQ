@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { LazyMotion, domAnimation } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { WhySwasthIQ } from './components/WhySwasthIQ';
@@ -14,7 +15,8 @@ export const App: React.FC = () => {
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-swasthiq-bg text-swasthiq-text flex flex-col selection:bg-swasthiq-insight selection:text-swasthiq-teal">
+    <LazyMotion features={domAnimation} strict>
+      <div className="min-h-screen bg-swasthiq-bg text-swasthiq-text flex flex-col selection:bg-swasthiq-insight selection:text-swasthiq-teal">
       {/* 1. Navbar */}
       <Navbar onOpenFeedback={() => setIsFeedbackOpen(true)} />
 
@@ -49,6 +51,7 @@ export const App: React.FC = () => {
       {/* 10. Footer */}
       <Footer onOpenFeedback={() => setIsFeedbackOpen(true)} />
     </div>
+    </LazyMotion>
   );
 };
 

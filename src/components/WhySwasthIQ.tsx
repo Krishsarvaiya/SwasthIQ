@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { PenNib, Sparkle, TrendUp, ShieldCheck } from '@phosphor-icons/react';
 import { useInView } from '../hooks/useInView';
-import { TrendSpark } from './TrendSpark';
+
+const TrendSpark = lazy(() => import('./TrendSpark'));
 
 const items = [
   { icon: PenNib, title: 'Reads handwritten prescriptions too', text: 'Photograph a doctor\u2019s note or a printed lab report. SwasthIQ turns it into organised records you can search.', wide: true },
@@ -29,7 +30,11 @@ export const WhySwasthIQ: React.FC = () => {
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-swasthiq-text mb-2">{it.title}</h3>
                   <p className="text-swasthiq-text/75 leading-relaxed max-w-xl">{it.text}</p>
-                  {it.title === 'Shows trends, not just files' && <TrendSpark />}
+                  {it.title === 'Shows trends, not just files' && (
+                    <Suspense fallback={<div className="w-full mt-4 pt-3 border-t border-transparent"><div className="w-full h-24" /></div>}>
+                      <TrendSpark />
+                    </Suspense>
+                  )}
                 </div>
               </div>
             );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useReducedMotion } from 'motion/react';
+import { m, useReducedMotion } from 'motion/react';
 
 export const LotusMark: React.FC = () => {
   const prefersReduced = useReducedMotion();
@@ -91,7 +91,7 @@ export const LotusMark: React.FC = () => {
         {/* 1. Outer Blue Petals Group (Opens first at t=0s, rotated 25 deg toward center) */}
         <g id="outer-blue-petals">
           {/* Left Outer Petal */}
-          <motion.g
+          <m.g
             initial={{ rotate: shouldReduce ? 0 : 25, opacity: shouldReduce ? 1 : 0.4 }}
             animate={{ rotate: 0, opacity: 1 }}
             transition={{ duration: shouldReduce ? 0 : 1.2, ease: easeOutCubic }}
@@ -107,10 +107,10 @@ export const LotusMark: React.FC = () => {
               d="M 500 715 C 330 715 130 630 42 380 C 80 470 170 570 330 640 C 400 670 460 700 500 715 Z"
               fill="url(#lotusOuterBlueLeft)"
             />
-          </motion.g>
+          </m.g>
 
           {/* Right Outer Petal */}
-          <motion.g
+          <m.g
             initial={{ rotate: shouldReduce ? 0 : -25, opacity: shouldReduce ? 1 : 0.4 }}
             animate={{ rotate: 0, opacity: 1 }}
             transition={{ duration: shouldReduce ? 0 : 1.2, ease: easeOutCubic }}
@@ -126,13 +126,13 @@ export const LotusMark: React.FC = () => {
               d="M 500 715 C 670 715 870 630 958 380 C 920 470 830 570 670 640 C 600 670 540 700 500 715 Z"
               fill="url(#lotusOuterBlueRight)"
             />
-          </motion.g>
+          </m.g>
         </g>
 
         {/* 2. Large Teal-Green Leaves (Opens staggered +90ms, rotated 18 deg toward center) */}
         <g id="large-teal-leaves">
           {/* Left Leaf */}
-          <motion.g
+          <m.g
             initial={{ rotate: shouldReduce ? 0 : 18, opacity: shouldReduce ? 1 : 0.5 }}
             animate={{ rotate: 0, opacity: 1 }}
             transition={{ delay: shouldReduce ? 0 : 0.09, duration: shouldReduce ? 0 : 1.2, ease: easeOutCubic }}
@@ -148,10 +148,10 @@ export const LotusMark: React.FC = () => {
               d="M 480 715 C 330 715 165 520 165 360 C 165 295 175 240 190 205 C 225 310 310 460 380 540 C 430 600 465 660 480 715 Z"
               fill="url(#lotusLeafLeft)"
             />
-          </motion.g>
+          </m.g>
 
           {/* Right Leaf */}
-          <motion.g
+          <m.g
             initial={{ rotate: shouldReduce ? 0 : -18, opacity: shouldReduce ? 1 : 0.5 }}
             animate={{ rotate: 0, opacity: 1 }}
             transition={{ delay: shouldReduce ? 0 : 0.09, duration: shouldReduce ? 0 : 1.2, ease: easeOutCubic }}
@@ -167,13 +167,13 @@ export const LotusMark: React.FC = () => {
               d="M 520 715 C 670 715 835 520 835 360 C 835 295 825 240 810 205 C 775 310 690 460 620 540 C 570 600 535 660 520 715 Z"
               fill="url(#lotusLeafRight)"
             />
-          </motion.g>
+          </m.g>
         </g>
 
         {/* 3. Inner Dark-Teal Petals (Opens staggered +180ms, rotated 12 deg toward center) */}
         <g id="inner-dark-teal-petals">
           {/* Left Inner Petal */}
-          <motion.path
+          <m.path
             d="M 500 215 C 380 205 280 175 200 145 C 275 240 375 330 500 395 C 490 330 495 260 500 215 Z"
             fill="url(#lotusInnerLeft)"
             initial={{ rotate: shouldReduce ? 0 : 12, opacity: shouldReduce ? 1 : 0.6 }}
@@ -183,7 +183,7 @@ export const LotusMark: React.FC = () => {
           />
 
           {/* Right Inner Petal */}
-          <motion.path
+          <m.path
             d="M 500 215 C 620 205 720 175 800 145 C 725 240 625 330 500 395 C 510 330 505 260 500 215 Z"
             fill="url(#lotusInnerRight)"
             initial={{ rotate: shouldReduce ? 0 : -12, opacity: shouldReduce ? 1 : 0.6 }}
@@ -194,7 +194,7 @@ export const LotusMark: React.FC = () => {
         </g>
 
         {/* 4. Central Blue Drop with White Cross (Fades in at t=0.35s) */}
-        <motion.g
+        <m.g
           id="central-drop-cross"
           initial={{ opacity: shouldReduce ? 1 : 0, scale: shouldReduce ? 1 : 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -212,10 +212,10 @@ export const LotusMark: React.FC = () => {
             <rect x="430" y="524" width="140" height="42" rx="8" fill="#ffffff" />
             <rect x="479" y="475" width="42" height="140" rx="8" fill="#ffffff" />
           </g>
-        </motion.g>
+        </m.g>
 
         {/* 5. Head Circle (Settles in last with small scale-up at t=0.55s) */}
-        <motion.circle
+        <m.circle
           id="head-circle"
           cx="500"
           cy="115"

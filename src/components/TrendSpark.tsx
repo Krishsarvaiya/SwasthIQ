@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useReducedMotion } from 'motion/react';
+import { m, useReducedMotion } from 'motion/react';
 
 const dataPoints = [
   { month: 'Mar', val: 13.1, x: 24, y: 51 },
@@ -23,7 +23,7 @@ export const TrendSpark: React.FC = () => {
         Hemoglobin trend chart from March to August showing gradual rise from 13.1 to 13.8 g/dL. Sample data for illustration.
       </span>
 
-      <motion.div
+      <m.div
         aria-hidden="true"
         initial={shouldReduce ? 'visible' : 'hidden'}
         whileInView="visible"
@@ -81,7 +81,7 @@ export const TrendSpark: React.FC = () => {
             />
 
             {/* Smooth Teal Trend Line */}
-            <motion.path
+            <m.path
               d={curvePath}
               stroke="#0FAE9B"
               strokeWidth="2.5"
@@ -102,7 +102,7 @@ export const TrendSpark: React.FC = () => {
 
             {/* Data Dots */}
             {dataPoints.map((pt, idx) => (
-              <motion.circle
+              <m.circle
                 key={pt.month}
                 cx={pt.x}
                 cy={pt.y}
@@ -127,7 +127,7 @@ export const TrendSpark: React.FC = () => {
             ))}
 
             {/* Final Value Callout near last point */}
-            <motion.g
+            <m.g
               variants={{
                 hidden: { opacity: 0, scale: 0.8 },
                 visible: {
@@ -159,7 +159,7 @@ export const TrendSpark: React.FC = () => {
               >
                 13.8 g/dL
               </text>
-            </motion.g>
+            </m.g>
 
             {/* Tiny Month Labels along X-Axis */}
             {dataPoints.map((pt) => (
@@ -182,7 +182,9 @@ export const TrendSpark: React.FC = () => {
         <p className="text-[8.5px] text-swasthiq-muted/80 text-center pt-1 font-medium">
           Sample data for illustration
         </p>
-      </motion.div>
+      </m.div>
     </div>
   );
 };
+
+export default TrendSpark;

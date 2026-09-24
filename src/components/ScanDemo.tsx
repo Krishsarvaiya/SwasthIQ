@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, useReducedMotion } from 'motion/react';
+import { m, useReducedMotion } from 'motion/react';
 import { Check } from '@phosphor-icons/react';
 
 interface ScanDemoProps {
@@ -48,7 +48,7 @@ export const ScanDemo: React.FC<ScanDemoProps> = ({ isStatic = false }) => {
       >
         {/* Animated Scan Line (sweeps top to bottom over ~1s after 600ms) */}
         {!shouldReduce && (
-          <motion.div
+          <m.div
             key={`scan-${replayKey}`}
             initial={{ y: 0, opacity: 0 }}
             animate={{
@@ -90,7 +90,7 @@ export const ScanDemo: React.FC<ScanDemoProps> = ({ isStatic = false }) => {
                 <div key={row.name} className="relative pt-0.5">
                   <div className="relative px-1.5 py-1 rounded-md text-[10px] overflow-hidden">
                     {/* Background tint: amber for Vitamin D */}
-                    <motion.div
+                    <m.div
                       initial={{ opacity: shouldReduce ? 1 : 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay, duration: shouldReduce ? 0 : 0.25 }}
@@ -111,20 +111,20 @@ export const ScanDemo: React.FC<ScanDemoProps> = ({ isStatic = false }) => {
                         <span className="font-bold text-amber-800">
                           {row.value}
                         </span>
-                        <motion.span
+                        <m.span
                           initial={{ opacity: shouldReduce ? 1 : 0, scale: shouldReduce ? 1 : 0.5 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay, duration: shouldReduce ? 0 : 0.2 }}
                           className="w-3.5 h-3.5 rounded-full bg-amber-500/20 text-amber-800 flex items-center justify-center text-[9px] font-bold"
                         >
                           !
-                        </motion.span>
+                        </m.span>
                       </div>
                     </div>
                   </div>
 
                   {/* Flag guidance pill */}
-                  <motion.div
+                  <m.div
                     initial={{ opacity: shouldReduce ? 1 : 0, y: shouldReduce ? 0 : 3 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{
@@ -134,7 +134,7 @@ export const ScanDemo: React.FC<ScanDemoProps> = ({ isStatic = false }) => {
                     className="mt-1 px-1.5 py-0.5 rounded-md bg-amber-50 border border-amber-300 text-amber-800 text-[8.5px] leading-tight font-medium"
                   >
                     Below range. Worth discussing with your doctor.
-                  </motion.div>
+                  </m.div>
                 </div>
               );
             }
@@ -145,7 +145,7 @@ export const ScanDemo: React.FC<ScanDemoProps> = ({ isStatic = false }) => {
                 className="relative px-1.5 py-1 rounded-md text-[10px] overflow-hidden"
               >
                 {/* Background tint: soft teal */}
-                <motion.div
+                <m.div
                   initial={{ opacity: shouldReduce ? 1 : 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay, duration: shouldReduce ? 0 : 0.25 }}
@@ -166,14 +166,14 @@ export const ScanDemo: React.FC<ScanDemoProps> = ({ isStatic = false }) => {
                     <span className="font-semibold text-swasthiq-text">
                       {row.value}
                     </span>
-                    <motion.span
+                    <m.span
                       initial={{ opacity: shouldReduce ? 1 : 0, scale: shouldReduce ? 1 : 0.5 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay, duration: shouldReduce ? 0 : 0.2 }}
                       className="w-3.5 h-3.5 rounded-full bg-swasthiq-teal/15 text-swasthiq-teal flex items-center justify-center shrink-0"
                     >
                       <Check size={9} weight="bold" />
-                    </motion.span>
+                    </m.span>
                   </div>
                 </div>
               </div>
