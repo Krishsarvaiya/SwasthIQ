@@ -2,10 +2,10 @@ import React from 'react';
 import { CaretDown } from '@phosphor-icons/react';
 
 const faqs = [
+  ['Does it cost anything?', 'No. SwasthIQ is free for everyone to download and use.'],
   ['Who can see my records?', 'Only you. A doctor can view records only after you approve their request, and only for the time you choose.'],
   ['Is SwasthIQ a diagnosis tool?', 'No. The insights explain your reports in plain language. Always discuss results and decisions with your doctor.'],
   ['Which phones does the beta support?', 'Android 8.0 (API 26) or newer. An iPhone version is not available yet.'],
-  ['Does it cost anything?', 'The beta is free while it is in public testing.'],
   ['How do I check my download is genuine?', 'Compare the SHA-256 checksum shown in the download section with the file you received.'],
   ['I found a bug. What should I do?', 'Use the Feedback button and tell us your phone model. Please leave personal medical details out of the message.'],
 ];

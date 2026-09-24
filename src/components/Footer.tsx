@@ -80,7 +80,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenFeedback }) => {
 
         {/* Bottom copyright and disclaimer */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-swasthiq-muted text-center sm:text-left">
-          <p>© {new Date().getFullYear()} SwasthIQ. All rights reserved. Public Beta Release.</p>
+          <p>© {new Date().getFullYear()} SwasthIQ. All rights reserved. Free for everyone.</p>
           <p>Designed for Android Beta testers to organize and track health information.</p>
         </div>
       </div>

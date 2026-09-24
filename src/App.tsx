@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { LazyMotion, domAnimation } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { ScanToInsight } from './components/ScanToInsight';
 import { WhySwasthIQ } from './components/WhySwasthIQ';
 import { AppShowcase } from './components/AppShowcase';
 import { HowItWorks } from './components/HowItWorks';
+import { FreeForAll } from './components/FreeForAll';
 import { DoctorAccess } from './components/DoctorAccess';
 import { FAQ } from './components/FAQ';
 import { BetaCTA } from './components/BetaCTA';
@@ -14,13 +17,17 @@ export const App: React.FC = () => {
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-swasthiq-bg text-swasthiq-text flex flex-col selection:bg-swasthiq-insight selection:text-swasthiq-teal">
+    <LazyMotion features={domAnimation} strict>
+      <div className="min-h-screen bg-swasthiq-bg text-swasthiq-text flex flex-col selection:bg-swasthiq-insight selection:text-swasthiq-teal">
       {/* 1. Navbar */}
       <Navbar onOpenFeedback={() => setIsFeedbackOpen(true)} />
 
       <main className="flex-grow">
         {/* 2. Hero */}
         <Hero />
+
+        {/* 3. Scan to Insight Process Overview */}
+        <ScanToInsight />
 
         {/* 4. Core Features */}
         <WhySwasthIQ />
@@ -30,6 +37,9 @@ export const App: React.FC = () => {
 
         {/* 6. How It Works */}
         <HowItWorks />
+
+        {/* Free For Everyone Strip */}
+        <FreeForAll />
 
         {/* 7. Doctor Access */}
         <DoctorAccess />
@@ -49,6 +59,7 @@ export const App: React.FC = () => {
       {/* 10. Footer */}
       <Footer onOpenFeedback={() => setIsFeedbackOpen(true)} />
     </div>
+    </LazyMotion>
   );
 };
 
