@@ -11,9 +11,9 @@ const faqs = [
 ];
 
 export const FAQ: React.FC = () => (
-  <section id="faq" className="py-20 md:py-28 bg-swasthiq-bg">
+  <section id="faq" className="py-12 md:py-16 bg-swasthiq-bg">
     <div className="max-w-3xl mx-auto px-4 sm:px-6">
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-swasthiq-text tracking-tight mb-10">Questions before you install</h2>
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-swasthiq-text tracking-tight mb-8">Questions before you install</h2>
       <div className="space-y-3">
         {faqs.map(([q, a]) => (
           <details key={q} className="group rounded-2xl bg-swasthiq-card border border-swasthiq-border px-6 py-4 open:shadow-soft">

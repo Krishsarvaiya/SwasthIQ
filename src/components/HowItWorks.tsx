@@ -33,10 +33,10 @@ export const HowItWorks: React.FC = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="how-it-works" className="py-20 md:py-28">
+    <section ref={sectionRef} id="how-it-works" className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`text-center max-w-2xl mx-auto mb-16 space-y-3 transition-all duration-600 ease-out ${
+          className={`text-center max-w-2xl mx-auto mb-10 space-y-3 transition-all duration-600 ease-out ${
             isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >

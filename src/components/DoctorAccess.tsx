@@ -29,7 +29,7 @@ export const DoctorAccess: React.FC = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-28 bg-swasthiq-card border-y border-swasthiq-border/80">
+    <section ref={sectionRef} className="py-12 md:py-16 bg-swasthiq-card border-y border-swasthiq-border/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Text & Flow */}

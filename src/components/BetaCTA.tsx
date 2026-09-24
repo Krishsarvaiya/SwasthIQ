@@ -11,7 +11,7 @@ export const BetaCTA: React.FC<BetaCTAProps> = ({ onOpenFeedback }) => {
   const [sectionRef, isInView] = useInView<HTMLElement>({ threshold: 0.2 });
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-28 relative overflow-hidden">
+    <section ref={sectionRef} className="py-12 md:py-16 relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute inset-0 bg-gradient-to-b from-swasthiq-bg via-swasthiq-insight/30 to-swasthiq-bg pointer-events-none -z-10" />
 

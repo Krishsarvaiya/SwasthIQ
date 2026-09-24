@@ -12,9 +12,9 @@ const items = [
 export const WhySwasthIQ: React.FC = () => {
   const [ref, isInView] = useInView<HTMLElement>({ threshold: 0.15 });
   return (
-    <section ref={ref} id="features" className="py-20 md:py-28">
+    <section ref={ref} id="features" className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className={`max-w-2xl text-3xl sm:text-4xl font-extrabold text-swasthiq-text tracking-tight mb-12 transition-all duration-600 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+        <h2 className={`max-w-2xl text-3xl sm:text-4xl font-extrabold text-swasthiq-text tracking-tight mb-8 transition-all duration-600 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           Your reports stop living in WhatsApp chats and paper folders.
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

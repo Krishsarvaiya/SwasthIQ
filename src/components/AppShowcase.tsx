@@ -87,12 +87,12 @@ export const AppShowcase: React.FC = () => {
     <section
       ref={sectionRef}
       id="showcase"
-      className="pt-10 pb-20 md:pt-14 md:pb-32 bg-swasthiq-bg border-y border-swasthiq-border/80"
+      className="py-12 md:py-16 bg-swasthiq-bg border-y border-swasthiq-border/80"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header with smooth entrance */}
         <div
-          className={`text-center max-w-3xl mx-auto mb-10 space-y-3 transition-all duration-600 ease-out ${
+          className={`text-center max-w-3xl mx-auto mb-8 space-y-3 transition-all duration-600 ease-out ${
             isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >

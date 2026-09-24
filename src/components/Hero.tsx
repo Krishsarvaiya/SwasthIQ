@@ -33,7 +33,7 @@ export const Hero: React.FC = () => {
       id="home"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden"
+      className="relative pt-28 pb-8 md:pt-32 md:pb-12 overflow-hidden"
     >
       {/* Subtle Background Glow with ambient pulse and subtle parallax */}
       <div
