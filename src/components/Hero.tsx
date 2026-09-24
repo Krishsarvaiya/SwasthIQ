@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { DownloadSimple, ArrowRight, ShieldCheck, Sparkle } from '@phosphor-icons/react';
 import { CONFIG } from '../config';
 import { ScanDemo } from './ScanDemo';
+import { LotusMark } from './LotusMark';
 
 export const Hero: React.FC = () => {
   const [parallax, setParallax] = useState({ x: 0, y: 0 });
@@ -137,6 +138,14 @@ export const Hero: React.FC = () => {
               }}
               className="relative w-full max-w-[min(340px,38vh)] min-w-[250px]"
             >
+              {/* Lotus Mark Emblem behind the phone */}
+              <div
+                aria-hidden="true"
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] max-w-[90vw] pointer-events-none -z-10 opacity-[0.16]"
+              >
+                <LotusMark />
+              </div>
+
               {/* Desktop Scan Demo overlapping lower-left edge of the phone */}
               <div className="hidden lg:block absolute -left-14 bottom-10 z-20 -rotate-3">
                 <ScanDemo />
