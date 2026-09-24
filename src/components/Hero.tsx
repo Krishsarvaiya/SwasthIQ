@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { DownloadSimple, ArrowRight, ShieldCheck, Sparkle } from '@phosphor-icons/react';
+import { DownloadSimple, ArrowRight, ShieldCheck, Sparkle, Gift } from '@phosphor-icons/react';
 import { CONFIG } from '../config';
 import { LotusMark } from './LotusMark';
 import { PhoneScreen } from './PhoneScreen';
@@ -101,6 +101,13 @@ export const Hero: React.FC = () => {
               </a>
             </div>
 
+            <p
+              style={{ animationDelay: '340ms' }}
+              className="text-sm font-semibold text-swasthiq-teal text-center lg:text-left pt-1 animate-fade-up opacity-0"
+            >
+              Free for everyone. No payment needed.
+            </p>
+
             {/* Key Micro-trust Highlights */}
             <div
               style={{ animationDelay: '380ms' }}
@@ -115,8 +122,8 @@ export const Hero: React.FC = () => {
                 <span>AI biomarker insights</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-swasthiq-text/70 col-span-2 sm:col-span-1">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0" />
-                <span>Active Android beta</span>
+                <Gift size={20} className="text-swasthiq-teal shrink-0" weight="fill" />
+                <span>Free for everyone</span>
               </div>
             </div>
           </div>

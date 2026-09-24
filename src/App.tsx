@@ -6,6 +6,7 @@ import { ScanToInsight } from './components/ScanToInsight';
 import { WhySwasthIQ } from './components/WhySwasthIQ';
 import { AppShowcase } from './components/AppShowcase';
 import { HowItWorks } from './components/HowItWorks';
+import { FreeForAll } from './components/FreeForAll';
 import { DoctorAccess } from './components/DoctorAccess';
 import { FAQ } from './components/FAQ';
 import { BetaCTA } from './components/BetaCTA';
@@ -36,6 +37,9 @@ export const App: React.FC = () => {
 
         {/* 6. How It Works */}
         <HowItWorks />
+
+        {/* Free For Everyone Strip */}
+        <FreeForAll />
 
         {/* 7. Doctor Access */}
         <DoctorAccess />
