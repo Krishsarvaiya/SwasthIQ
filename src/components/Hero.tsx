@@ -91,7 +91,7 @@ export const Hero: React.FC = () => {
               </a>
 
               <a
-                href="#what-is-swasthiq"
+                href="#features"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-bold text-swasthiq-text bg-swasthiq-card hover:bg-swasthiq-insight/60 border border-swasthiq-border shadow-soft hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 active:scale-[0.98] group"
               >
                 <span>Explore SwasthIQ</span>
@@ -129,13 +129,13 @@ export const Hero: React.FC = () => {
                 transform: hasMouse ? `translate3d(${parallax.x * 5}px, ${parallax.y * 5}px, 0)` : 'none',
                 transition: 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
               }}
-              className="relative w-full max-w-[320px] sm:max-w-[340px]"
+              className="relative w-full max-w-[min(340px,38vh)] min-w-[250px]"
             >
               {/* Gentle Floating Wrapper */}
               <div className="animate-float-subtle">
                 {/* Phone Frame */}
                 <div className="relative rounded-[2.5rem] p-3 bg-gradient-to-b from-swasthiq-border/80 via-white to-swasthiq-border/60 shadow-floating border border-swasthiq-border">
-                  <div className="relative rounded-[2.1rem] overflow-hidden bg-swasthiq-bg border border-swasthiq-border/40 aspect-[9/19.5]">
+                  <div className="relative rounded-[2.1rem] overflow-hidden bg-swasthiq-bg border border-swasthiq-border/40 aspect-[9/19.5] pt-7">
                     {/* Top Notch / Dynamic Island indicator */}
                     <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-[#092A4A]/90 rounded-full z-20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-swasthiq-teal/70 mr-3" />
@@ -146,7 +146,7 @@ export const Hero: React.FC = () => {
                     <img
                       src="/assets/screens/01-dashboard.png"
                       alt="SwasthIQ Real Dashboard Screen"
-                      className="w-full h-full object-contain object-top"
+                      className="w-full h-full object-cover object-top"
                       loading="eager"
                     />
                   </div>

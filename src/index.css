@@ -102,5 +102,6 @@
   .animate-attention-cue {
     animation: none !important;
     transform: none !important;
+    opacity: 1 !important;
   }
 }

@@ -31,6 +31,7 @@ export default {
         '2xl': '1.25rem',
         '3xl': '1.75rem',
       },
+      transitionDuration: { '600': '600ms' },
       keyframes: {
         'float-subtle': {
           '0%, 100%': { transform: 'translateY(0px)' },
