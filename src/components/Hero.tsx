@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { DownloadSimple, ArrowRight, ShieldCheck, Sparkle } from '@phosphor-icons/react';
 import { CONFIG } from '../config';
+import { ScanDemo } from './ScanDemo';
 
 export const Hero: React.FC = () => {
   const [parallax, setParallax] = useState({ x: 0, y: 0 });
@@ -99,6 +100,11 @@ export const Hero: React.FC = () => {
               </a>
             </div>
 
+            {/* Under 1024px: Static ScanDemo below hero buttons */}
+            <div className="lg:hidden flex justify-center sm:justify-start pt-2">
+              <ScanDemo isStatic />
+            </div>
+
             {/* Key Micro-trust Highlights */}
             <div
               style={{ animationDelay: '380ms' }}
@@ -131,6 +137,11 @@ export const Hero: React.FC = () => {
               }}
               className="relative w-full max-w-[min(340px,38vh)] min-w-[250px]"
             >
+              {/* Desktop Scan Demo overlapping lower-left edge of the phone */}
+              <div className="hidden lg:block absolute -left-14 bottom-10 z-20 -rotate-3">
+                <ScanDemo />
+              </div>
+
               {/* Gentle Floating Wrapper */}
               <div className="animate-float-subtle">
                 {/* Phone Frame */}
