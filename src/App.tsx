@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { LazyMotion, domAnimation } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { ScanToInsight } from './components/ScanToInsight';
 import { WhySwasthIQ } from './components/WhySwasthIQ';
 import { AppShowcase } from './components/AppShowcase';
 import { HowItWorks } from './components/HowItWorks';
@@ -23,6 +24,9 @@ export const App: React.FC = () => {
       <main className="flex-grow">
         {/* 2. Hero */}
         <Hero />
+
+        {/* 3. Scan to Insight Process Overview */}
+        <ScanToInsight />
 
         {/* 4. Core Features */}
         <WhySwasthIQ />
