@@ -63,6 +63,11 @@ export const BetaCTA: React.FC<BetaCTAProps> = ({ onOpenFeedback }) => {
             <p className="text-xs text-white/60 pt-3">
               Requires Android 8.0 (API 26) or newer. Free during the public beta test.
             </p>
+            {CONFIG.apkSha256 && (
+              <p className="text-[11px] text-white/50 break-all">
+                SHA-256: <code>{CONFIG.apkSha256}</code>
+              </p>
+            )}
           </div>
         </div>
       </div>

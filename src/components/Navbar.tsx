@@ -96,7 +96,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenFeedback }) => {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-swasthiq-bg/95 backdrop-blur-xl border-b border-swasthiq-border px-4 pt-3 pb-6 space-y-3 shadow-soft animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden bg-swasthiq-bg/95 backdrop-blur-xl border-b border-swasthiq-border px-4 pt-3 pb-6 space-y-3 shadow-soft animate-fade-down">
           <div className="flex flex-col space-y-2 pt-2">
             {navLinks.map((link) => (
               <a
