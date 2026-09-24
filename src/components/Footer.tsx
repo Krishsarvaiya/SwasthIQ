@@ -57,6 +57,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenFeedback }) => {
             >
               Feedback
             </button>
+            <a href="#faq" className="hover:text-swasthiq-teal transition-colors duration-200">FAQ</a>
+            <a href="/privacy.html" className="hover:text-swasthiq-teal transition-colors duration-200">Privacy</a>
             <a
               href={CONFIG.androidBetaUrl}
               className="text-swasthiq-teal hover:underline inline-flex items-center gap-1 group transition-colors duration-200"
