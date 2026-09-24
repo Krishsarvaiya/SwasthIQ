@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Krish Sarvaiya. All rights reserved.
+ * Proprietary. Not licensed for copying or reuse. See LICENSE in the repository root.
+ */
+
 import React, { Suspense, lazy } from 'react';
 import { PenNib, Sparkle, TrendUp, ShieldCheck } from '@phosphor-icons/react';
 import { useInView } from '../hooks/useInView';

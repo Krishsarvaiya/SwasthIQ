@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Krish Sarvaiya. All rights reserved.
+ * Proprietary. Not licensed for copying or reuse. See LICENSE in the repository root.
+ */
+
 import React from 'react';
 import { UserCheck, HandWaving, SlidersHorizontal, LockKey } from '@phosphor-icons/react';
 import { useInView } from '../hooks/useInView';

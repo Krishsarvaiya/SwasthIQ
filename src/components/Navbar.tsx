@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Krish Sarvaiya. All rights reserved.
+ * Proprietary. Not licensed for copying or reuse. See LICENSE in the repository root.
+ */
+
 import React, { useState, useEffect } from 'react';
 import { List, X, DownloadSimple, ChatText } from '@phosphor-icons/react';
 import { CONFIG } from '../config';

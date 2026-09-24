@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Krish Sarvaiya. All rights reserved.
+ * Proprietary. Not licensed for copying or reuse. See LICENSE in the repository root.
+ */
+
 import React, { useState } from 'react';
 import { LazyMotion, domAnimation } from 'motion/react';
 import { Navbar } from './components/Navbar';

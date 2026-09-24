@@ -1,0 +1,67 @@
+SWASTHIQ PROPRIETARY SOURCE-AVAILABLE LICENSE
+
+Copyright (c) 2026 Krish Sarvaiya. All rights reserved.
+
+1. OWNERSHIP
+This repository and everything in it (the "Software"), including source code,
+design, text, layout, logos, app screenshots and other brand assets, is owned
+by Krish Sarvaiya ("Owner"). No ownership is transferred to you.
+
+2. LIMITED PERMISSION TO VIEW
+You may view the source code and, solely to evaluate it (for example a
+recruiter, teacher or reviewer assessing the Owner's work), clone it and run
+it on your own computer. This permission is personal, non-transferable and
+does not include any right to publish, host or deploy the Software.
+
+3. WHAT IS NOT ALLOWED
+Without the Owner's prior written permission you may not:
+  a) copy, reproduce, modify, translate or create derivative works of the
+     Software or any part of it;
+  b) distribute, publish, sublicense, sell, rent or otherwise make the
+     Software available to others, including by hosting it online;
+  c) use the Software or any part of it in a commercial product or service,
+     or in a product that competes with SwasthIQ;
+  d) copy the design, layout, copy text or user experience to build a similar
+     website or app;
+  e) use the Software, in whole or in part, to train, fine-tune or evaluate
+     machine-learning or AI models, or to build datasets for that purpose;
+  f) remove or alter any copyright, licence or brand notice.
+
+4. BRAND
+"SwasthIQ", the lotus logo, app screenshots and all other brand assets are the
+Owner's property. This licence grants no right to use them, and no trademark
+licence of any kind.
+
+5. THIRD-PARTY COMPONENTS
+The Software uses open-source libraries that remain under their own licences
+(see THIRD_PARTY_LICENSES.md). Nothing in this licence changes your rights
+under those licences. Nothing in this licence limits the rights that GitHub's
+Terms of Service give users to view and fork public repositories on GitHub.
+
+6. CONTRIBUTIONS AND FEEDBACK
+Contributions (pull requests, patches) are not accepted unless you first sign
+a written agreement with the Owner that assigns or licenses your work to the
+Owner. Feedback and suggestions may be used by the Owner without obligation or
+payment.
+
+7. NO WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NONINFRINGEMENT. The Software is not medical advice and must not
+be relied on for medical decisions.
+
+8. LIMITATION OF LIABILITY
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE OWNER IS NOT LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY ARISING FROM OR IN CONNECTION WITH THE SOFTWARE OR
+ITS USE.
+
+9. TERMINATION
+This permission ends automatically if you breach this licence. On termination
+you must delete all copies of the Software in your possession.
+
+10. GOVERNING LAW
+This licence is governed by the laws of India. Courts at Mumbai, Maharashtra
+have exclusive jurisdiction.
+
+11. CONTACT
+For permission or licensing enquiries: krishsarvaiya2005@gmail.com
